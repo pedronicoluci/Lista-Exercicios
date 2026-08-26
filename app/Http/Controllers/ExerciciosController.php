@@ -8,7 +8,6 @@ use LDAP\Result;
 class ExerciciosController extends Controller
 {
     /*Exercício 1*/
-
     public function abrirFormExer1(){
         return view('exer1');
     }
@@ -21,7 +20,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 2*/
-
     public function abrirFormExer2(){
         return view('exer2');
     }
@@ -34,7 +32,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 3*/
-
     public function abrirFormExer3(){
         return view('exer3');
     }
@@ -47,7 +44,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 4*/
-
     public function abrirFormExer4(){
         return view('exer4');
     }
@@ -60,7 +56,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 5*/
-
     public function abrirFormExer5(){
         return view('exer5');
     }
@@ -137,7 +132,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 12*/
-
     public function abrirFormExer12(){
         return view('exer12');
     }
@@ -150,7 +144,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 13*/
-
     public function abrirFormExer13(){
         return view('exer13');
     }
@@ -162,7 +155,6 @@ class ExerciciosController extends Controller
     }
 
      /*Exercício 14*/
-
     public function abrirFormExer14(){
         return view('exer14');
     }
@@ -174,7 +166,6 @@ class ExerciciosController extends Controller
     }
 
     /*Exercício 15*/
-
     public function abrirFormExer15(){
         return view('exer15');
     }
@@ -185,4 +176,66 @@ class ExerciciosController extends Controller
         $imc = $peso / ($alt ** 2);
         return view('exer15', ['imc' => $imc]);
     }
+
+    /*Exercício 16*/
+    public function abrirFormExer16(){
+        return view('exer16');
+    }
+
+    public function respostaExer16(Request $request){
+        $preco = $request->preco;
+        $desc = $request->desc;
+        $preco_fin = $preco - (($desc / 100) * $preco);
+        return view('exer16', ['preco_fin' => $preco_fin]);
+    }
+
+    /*Exercício 17*/
+    public function abrirFormExer17(){
+        return view('exer17');
+    }
+
+    public function respostaExer17(Request $request){
+        $capital = $request->capital;
+        $taxa = $request->taxa;
+        $periodo = $request->periodo;
+        $juros_simples = $capital * ($taxa / 100) * $periodo;
+        return view('exer17', ['juros_simples' => $juros_simples]);
+    }
+
+    /*Exercício 18*/
+    public function abrirFormExer18(){
+        return view('exer18');
+    }
+
+    public function respostaExer18(Request $request){
+        $capital = $request->capital;
+        $taxa = $request->taxa;
+        $periodo = $request->periodo;
+        $montante = $capital * (($taxa / 100 + 1) ** $periodo);
+        return view('exer18', ['montante' => $montante]);
+    }
+
+    /*Exercício 19*/
+    public function abrirFormExer19(){
+        return view('exer19');
+    }
+
+    public function respostaExer19(Request $request){
+        $dias = $request->dias;
+        $tempo = ($dias * 24) . " horas, " . ($dias * 24 * 60) . " minutos e " . ($dias * 24 * 60 * 60) . " segundos";
+        return view('exer19', ['tempo' => $tempo]);
+    }
+
+    /*Exercício 20*/
+    public function abrirFormExer20(){
+        return view('exer20');
+    }
+
+    public function respostaExer20(Request $request){
+        $distancia = $request->distancia;
+        $tempo = $request->tempo;
+        $velocidade = $distancia / $tempo;
+        return view('exer20', ['velocidade' => $velocidade]);
+    }
+
 }

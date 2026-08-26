@@ -97,3 +97,33 @@ Route::post('/exer14resp', [ExerciciosController::class, 'respostaExer14']);
 Route::get('/exer15', [ExerciciosController::class, 'abrirFormExer15']);
 
 Route::post('/exer15resp', [ExerciciosController::class, 'respostaExer15']);
+
+/*Exercício 16*/
+
+Route::get('/exer16', [ExerciciosController::class, 'abrirFormExer16']);
+
+Route::post('/exer16resp', [ExerciciosController::class, 'respostaExer16']);
+
+/*Exercício 17*/
+
+Route::get('/exer17', [ExerciciosController::class, 'abrirFormExer17']);
+
+Route::post('/exer17resp', [ExerciciosController::class, 'respostaExer17']);
+
+/*Exercício 18*/
+
+Route::get('/exer18', [ExerciciosController::class, 'abrirFormExer18']);
+
+Route::post('/exer18resp', [ExerciciosController::class, 'respostaExer18']);
+
+/*Exercício 19*/
+
+Route::get('/exer19', [ExerciciosController::class, 'abrirFormExer19']);
+
+Route::post('/exer19resp', [ExerciciosController::class, 'respostaExer19']);
+
+/*Exercício 20*/
+
+Route::get('/exer20', [ExerciciosController::class, 'abrirFormExer20']);
+
+Route::post('/exer20resp', [ExerciciosController::class, 'respostaExer20']);
